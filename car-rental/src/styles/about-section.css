@@ -27,5 +27,15 @@
 }
 
 @media only screen and (max-width:768px){
+    .about__img{
+        margin-top: 30px;
+    }
+
     
+}
+
+@media only screen and (max-width:576px){
+    .about__section{
+        margin-top: 280px;
+    }
 }
