@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "reactstrap";
 import "../../styles/blog-item.css";
 import { Link } from "react-router-dom";
-import blogData from "../../assets/data/blogData";
+import blogData from "../../assets/data/blogData.js";
 
 const BlogList = () => {
   return (
