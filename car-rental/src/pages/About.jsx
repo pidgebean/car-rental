@@ -22,7 +22,7 @@ const About = () => {
           <Row>
             <Col lg='6' md='6' sm='12'>
               <div className="about__page-img">
-                <img src={driveImg} alt="" className='w-100 rounded-3'/>
+                <img src={driveImg} alt="" className='w-100 rounded-3 mb-5'/>
               </div>
             </Col>
             
@@ -63,7 +63,7 @@ const About = () => {
       <BecomeDriverSection/>
 
       <section>
-        <Container>
+        <Container className='mt-4'>
           <Row>
             <Col lg='12' className='mb-5 text-center'>
               <h6 className="section__subtitle">Experts</h6>

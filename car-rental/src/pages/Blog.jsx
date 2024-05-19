@@ -12,6 +12,7 @@ const Blog = () => {
         <Container>
           <Row>
             <BlogList/>
+            <BlogList/>
           </Row>
         </Container>
       </section>

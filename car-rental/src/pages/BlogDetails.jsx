@@ -11,12 +11,12 @@ import '../styles/blog-details.css'
 const BlogDetails = () => {
 
   const {slug} = useParams()
-  const blog = blogData.find(blog => blog.title)
+  const blog = blogData.find(blog => blog.title === slug)
   return (
     <Helmet title={blog.title}>
       <section>
         <Container>
-          <Row>
+          <Row className='mt-5'>
             <Col lg='8' md='8'>
               <div className='blog__details'>
                 <img src={blog.imgUrl} alt="" className='w-100'/>
@@ -45,8 +45,8 @@ const BlogDetails = () => {
               <div className="comment__list mt-5">
                 <h4 className="mb-5">3 Comments</h4>
 
-                <div className="single__coment d-flex gap-3">
-                  <img src={commentImg} alt="" />
+                <div className="single__comment d-flex gap-3">
+                  <img src={commentImg} alt=""/>
                   <div className="comment__content">
                     <h6 className='fw-bold'>David Visa</h6>
                     <p className="section__description">14 July, 2022</p>
@@ -80,7 +80,7 @@ const BlogDetails = () => {
                       <textarea rows='5' placeholder='Comment...' className='w-100 py-2 px-3'></textarea>
                     </FormGroup>
 
-                    <button className="btn mt-3 comment-btn">Post a Comment</button>
+                    <button className="btn mt-3 mb-5 comment__btn">Post a Comment</button>
                   </Form>
                 </div>
               </div>

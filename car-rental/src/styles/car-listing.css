@@ -1,0 +1,13 @@
+.low-btn, .high-btn{
+    padding: 7px 15px;
+    color: #000d6b;
+    background: #fff;
+    border: 1px solid #000d6b;
+    outline: none;
+    border-radius: 5px;
+}
+
+.low-btn:focus, .high-btn:focus{
+    background: #000d6b;
+    color: #fff;
+}

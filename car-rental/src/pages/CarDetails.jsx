@@ -19,7 +19,7 @@ const CarDetails = () => {
   return (
     <Helmet title={singleCarItem.carName}>
       <section>
-        <Container>
+        <Container className="mt-5">
           <Row>
             <Col lg="6">
               <img src={singleCarItem.imgUrl} alt="" className="w-100" />

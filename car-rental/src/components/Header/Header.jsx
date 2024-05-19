@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 
-import { Container, Row, Col } from 'reactstrap'
+import { Container, Row, Col, Nav } from 'reactstrap'
 import { Link, NavLink } from 'react-router-dom'
 import '../../styles/header.css'
 
@@ -134,8 +134,12 @@ const Header = () => {
 
             <div className="nav__right">
               <div className="search__box">
-                <input type="text" placeholder='Search' />
-                <span><i className='ri-search-line'></i></span>
+                {/* <input type="text" placeholder='Search' /> */}
+                
+                <NavLink to='/search'>
+                  <span><i className='ri-search-line'></i></span>
+                </NavLink>
+                
               </div>
             </div>
 

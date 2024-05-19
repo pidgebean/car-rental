@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import Helmet from '../components/Helmet/Helmet'
 import CommonSection from '../components/UI/CommonSection'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import '../styles/contact.css'
 
 const socialLinks = [
@@ -27,6 +30,10 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  const notify = () => {
+    // e.preventDeafult()
+    toast("Message Sent");
+  }
   return (
     <Helmet title='Contact'>
       <CommonSection title='Contact'/>
@@ -37,7 +44,7 @@ const Contact = () => {
             <Col lg='7' md='7'>
               <h6 className='fw-bold mb-4'>Get In Touch</h6>
 
-              <Form>
+              <Form className='mb-4'>
                 <FormGroup className='contact__form'>
                   <Input placeholder='Your Name' type='text'/>
                 </FormGroup>
@@ -50,10 +57,13 @@ const Contact = () => {
                   <textarea rows='5' placeholder='Message' className='textarea'></textarea>
                 </FormGroup>
 
-                <button className='contact__btn' type='submit'>
-                  Send Message
-                </button>
+                
               </Form>
+              <button className='contact__btn' onClick={notify}>
+                Send Message
+              </button>
+
+              <ToastContainer/>
             </Col>
 
             <Col lg='5' md='5'>

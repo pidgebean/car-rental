@@ -87,7 +87,7 @@ const Home = () => {
       <section>
         <Container>
           <Row>
-            <Col lg='12' className='mb-4 text-center'>
+            <Col lg='12' className='mt-4 text-center'>
               <h6 className="section__subtitle">Our clients say</h6>
               <h2 className="section__title">Testimonials</h2>
             </Col>
@@ -99,7 +99,7 @@ const Home = () => {
 
       {/* ============================= blog section ==================================== */}
 
-      <section>
+      <section className='mt-5'>
         <Container>
           <Row>
             <Col lg='12' className='mb-5 text-center'>
