@@ -6,15 +6,19 @@ import Helmet from "../components/Helmet/Helmet";
 import { useParams } from "react-router-dom";
 import BookingForm from "../components/UI/BookingForm";
 import PaymentMethod from "../components/UI/PaymentMethod";
+import "../styles/car-details.css"
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CarDetails = () => {
   const { slug } = useParams();
 
   const singleCarItem = carData.find((item) => item.carName === slug);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [singleCarItem]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [singleCarItem]);
 
   return (
     <Helmet title={singleCarItem.carName}>
@@ -118,6 +122,8 @@ const CarDetails = () => {
               <div className="payment__info mt-5">
                 <h5 className="mb-4 fw-bold ">Payment Information</h5>
                 <PaymentMethod />
+                <button className="reserve_btn" onClick={() => toast("Reserved!")}>Reserve Now</button>
+                <ToastContainer/>
               </div>
             </Col>
           </Row>
